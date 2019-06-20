@@ -117,7 +117,9 @@ Open cmd and go to the `labelImg <#labelimg>`__ directory
 
 .. code:: shell
 
-    pyrcc4 -o resources.py resources.qrc
+    pyrcc4 -o line/resources.py resources.qrc
+    For pyqt5, pyrcc5 -o libs/resources.py resources qrc
+    
     python labelImg.py
     python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
 
@@ -131,7 +133,7 @@ Open the Anaconda Prompt and go to the `labelImg <#labelimg>`__ directory
 .. code:: shell
 
     conda install pyqt=5
-    pyrcc5 -o resources.py resources.qrc
+    pyrcc5 -o libs/resources.py resources.qrc
     python labelImg.py
     python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
 
