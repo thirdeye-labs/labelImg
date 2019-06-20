@@ -24,6 +24,7 @@ class StringBundle:
         self.idToMessage = {}
         paths = self.__createLookupFallbackList(localeStr)
         for path in paths:
+            print('Loading bundle from : {}'.format(path))
             self.__loadBundle(path)
 
     @classmethod
@@ -35,7 +36,7 @@ class StringBundle:
             except:
                 print('Invalid locale')
                 localeStr = 'en'
-
+        print('Chosen locale is {}'.format(localeStr))
         return StringBundle(cls.__create_key, localeStr)
 
     def getString(self, stringId):
@@ -57,6 +58,7 @@ class StringBundle:
 
     def __loadBundle(self, path):
         PROP_SEPERATOR = '='
+        print('parsing file: ', path)
         f = QFile(path)
         if f.exists():
             if f.open(QIODevice.ReadOnly | QFile.Text):
@@ -69,5 +71,6 @@ class StringBundle:
                 key = key_value[0].strip()
                 value = PROP_SEPERATOR.join(key_value[1:]).strip().strip('"')
                 self.idToMessage[key] = value
+                print('Loaded {}: {}'.format(key, value))
 
             f.close()
