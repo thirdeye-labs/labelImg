@@ -174,6 +174,7 @@ Launch script (run with specified predefined classes + images and annotations fo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: shell
+
     ./run_labelImg_from_docker.sh \
     --img-folder=<IMG_FOLDER> \
     --ann-folder=<ANN_FOLDER> \
