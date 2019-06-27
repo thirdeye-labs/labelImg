@@ -148,6 +148,10 @@ Get from PyPI but only python3.0 or above
 
 Use Docker
 ~~~~~~~~~~~~~~~~~
+
+Generic command
+^^^^^^^^^^^^^^^
+
 .. code:: shell
 
     docker run -it \
@@ -165,6 +169,15 @@ Use Docker
     make qt4py2;./labelImg.py
 
 You can pull the image which has all of the installed and required dependencies. `Watch a demo video <https://youtu.be/nw1GexJzbCI>`__
+
+Launch script (run with specified predefined classes + images and annotations folders)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code:: shell
+    ./run_labelImg_from_docker.sh \
+    --img-folder=<IMG_FOLDER> \
+    --ann-folder=<ANN_FOLDER> \
+    --predefined-classes=<PREDEFINED_CLASSES_FILE> 
 
 
 Usage
